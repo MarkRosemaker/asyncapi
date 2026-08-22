@@ -134,7 +134,7 @@ type Schema struct {
 	Examples []jsontext.Value `json:"examples,omitempty" yaml:"examples,omitempty"`
 
 	// special encoding for binary data
-	ContentEncoding  string `json:"contentEncoding,omitempty" yaml:"contentEncoding,omitempty"`
+	ContentEncoding  string `json:"contentEncoding,omitempty"  yaml:"contentEncoding,omitempty"`
 	ContentMediaType string `json:"contentMediaType,omitempty" yaml:"contentMediaType,omitempty"`
 
 	// Whether the value is only sent by the server and must not be sent by the client.
