@@ -26,35 +26,35 @@ func TestSchema_Validate_Errors(t *testing.T) {
 		"minimum greater than maximum": {
 			&asyncapi.Schema{
 				Type: asyncapi.DataTypes{asyncapi.TypeInteger},
-				Min:  ptr(10.0), Max: ptr(5.0),
+				Min:  new(10.0), Max: new(5.0),
 			},
 			"minimum (10) is invalid: minimum is greater than maximum (10 > 5)",
 		},
 		"minLength greater than maxLength": {
 			&asyncapi.Schema{
 				Type:      asyncapi.DataTypes{asyncapi.TypeString},
-				MinLength: 10, MaxLength: ptr(uint(5)),
+				MinLength: 10, MaxLength: new(uint(5)),
 			},
 			"minLength (10) is invalid: minLength is greater than maxLength (10 > 5)",
 		},
 		"minItems greater than maxItems": {
 			&asyncapi.Schema{
 				Type:     asyncapi.DataTypes{asyncapi.TypeArray},
-				MinItems: 10, MaxItems: ptr(uint(5)),
+				MinItems: 10, MaxItems: new(uint(5)),
 			},
 			"minItems (10) is invalid: minItems is greater than maxItems (10 > 5)",
 		},
 		"minProperties greater than maxProperties": {
 			&asyncapi.Schema{
 				Type:          asyncapi.DataTypes{asyncapi.TypeObject},
-				MinProperties: 10, MaxProperties: ptr(uint(5)),
+				MinProperties: 10, MaxProperties: new(uint(5)),
 			},
 			"minProperties (10) is invalid: minProperties is greater than maxProperties (10 > 5)",
 		},
 		"multipleOf zero": {
 			&asyncapi.Schema{
 				Type:       asyncapi.DataTypes{asyncapi.TypeNumber},
-				MultipleOf: ptr(0.0),
+				MultipleOf: new(0.0),
 			},
 			"multipleOf (0) is invalid: must be greater than zero",
 		},
@@ -164,5 +164,3 @@ func TestSchema_SortMaps(t *testing.T) {
 		i++
 	}
 }
-
-func ptr[T any](v T) *T { return &v }

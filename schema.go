@@ -261,9 +261,15 @@ type subSchema struct {
 // subSchemas returns the subschemas that are held by a single field, in the order of the fields.
 func (s *Schema) subSchemas() []subSchema {
 	return []subSchema{
-		{"not", s.Not}, {"if", s.If}, {"then", s.Then}, {"else", s.Else},
-		{"items", s.Items}, {"additionalItems", s.AdditionalItems}, {"contains", s.Contains},
-		{"additionalProperties", s.AdditionalProperties}, {"propertyNames", s.PropertyNames},
+		{"not", s.Not},
+		{"if", s.If},
+		{"then", s.Then},
+		{"else", s.Else},
+		{"items", s.Items},
+		{"additionalItems", s.AdditionalItems},
+		{"contains", s.Contains},
+		{"additionalProperties", s.AdditionalProperties},
+		{"propertyNames", s.PropertyNames},
 	}
 }
 

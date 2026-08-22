@@ -4,6 +4,7 @@ import (
 	"encoding/json/jsontext"
 	"encoding/json/v2"
 	"slices"
+	"strings"
 
 	"github.com/MarkRosemaker/errpath"
 )
@@ -81,12 +82,13 @@ func (ds DataTypes) String() string {
 		return string(ds[0])
 	}
 
-	s := string(ds[0])
+	var s strings.Builder
+	s.WriteString(string(ds[0]))
 	for _, d := range ds[1:] {
-		s += ", " + string(d)
+		s.WriteString(", " + string(d))
 	}
 
-	return s
+	return s.String()
 }
 
 var _ json.UnmarshalerFrom = (*DataTypes)(nil)
