@@ -12,7 +12,7 @@ import (
 // If you're looking to apply traits to a message, see the [MessageTrait] object.
 // ([Specification])
 //
-// [Specification]: https://www.asyncapi.com/docs/reference/specification/v3.1.0#operationTraitObject
+// [Specification]: https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#operationTraitObject
 type OperationTrait struct {
 	// A human-friendly title for the operation.
 	Title string `json:"title,omitempty" yaml:"title,omitempty"`

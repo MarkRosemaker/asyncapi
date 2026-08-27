@@ -6,7 +6,7 @@ import "mime"
 // The value MUST be a specific media type (e.g. `application/json`)."
 // ([Specification])
 //
-// [Specification]: https://www.asyncapi.com/docs/reference/specification/v3.1.0#defaultContentTypeString
+// [Specification]: https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#defaultContentTypeString
 type MediaType string
 
 const (

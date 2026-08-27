@@ -20,7 +20,7 @@ import (
 // ([Specification])
 //
 // [bindings specification]: https://github.com/asyncapi/bindings
-// [Specification]: https://www.asyncapi.com/docs/reference/specification/v3.1.0#serverBindingsObject
+// [Specification]: https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#serverBindingsObject
 type Bindings map[Protocol]*Binding
 
 // Validate checks that the protocols are known and that the definitions are valid JSON.

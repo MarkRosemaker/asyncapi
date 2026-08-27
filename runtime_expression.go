@@ -28,7 +28,7 @@ import (
 // ([Specification])
 //
 // [ABNF]: https://tools.ietf.org/html/rfc5234
-// [Specification]: https://www.asyncapi.com/docs/reference/specification/v3.1.0#runtimeExpression
+// [Specification]: https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#runtimeExpression
 //
 // [RFC6901]: https://tools.ietf.org/html/rfc6901
 type RuntimeExpression string

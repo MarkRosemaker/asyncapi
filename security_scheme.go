@@ -25,7 +25,7 @@ import (
 // [RFC6749]: https://tools.ietf.org/html/rfc6749
 // [OpenID Connect Discovery]: https://tools.ietf.org/html/draft-ietf-oauth-discovery-06
 // [RFC4422]: https://tools.ietf.org/html/rfc4422
-// [Specification]: https://www.asyncapi.com/docs/reference/specification/v3.1.0#securitySchemeObject
+// [Specification]: https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#securitySchemeObject
 type SecurityScheme struct {
 	// REQUIRED. The type of the security scheme.
 	Type SecuritySchemeType `json:"type" yaml:"type"`

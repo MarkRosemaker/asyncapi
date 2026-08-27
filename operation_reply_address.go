@@ -11,7 +11,7 @@ import (
 // For specifying and computing the location of a reply address, a [RuntimeExpression] is used.
 // ([Specification])
 //
-// [Specification]: https://www.asyncapi.com/docs/reference/specification/v3.1.0#operationReplyAddressObject
+// [Specification]: https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#operationReplyAddressObject
 type OperationReplyAddress struct {
 	// An optional description of the address. CommonMark syntax can be used for rich text representation.
 	Description string `json:"description,omitempty" yaml:"description,omitempty"`

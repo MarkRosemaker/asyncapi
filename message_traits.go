@@ -12,7 +12,7 @@ import (
 // MessageTraits is a map of Message Trait Objects.
 // ([Specification])
 //
-// [Specification]: https://www.asyncapi.com/docs/reference/specification/v3.1.0#componentsMessageTraits
+// [Specification]: https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#componentsMessageTraits
 type MessageTraits map[string]*MessageTraitRef
 
 // Validate validates each message trait.

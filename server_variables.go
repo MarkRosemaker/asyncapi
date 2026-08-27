@@ -13,7 +13,7 @@ import (
 // The value is used for substitution in the server's host and pathname template.
 // ([Specification])
 //
-// [Specification]: https://www.asyncapi.com/docs/reference/specification/v3.1.0#serverObjectVariables
+// [Specification]: https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#serverObjectVariables
 type ServerVariables map[string]*ServerVariableRef
 
 // Validate validates each server variable.

@@ -12,7 +12,7 @@ import (
 // and rules. [...] For this specification, reference resolution is done as defined by the JSON
 // Reference specification and not by the JSON Schema specification." ([Specification])
 //
-// [Specification]: https://www.asyncapi.com/docs/reference/specification/v3.1.0#referenceObject
+// [Specification]: https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#referenceObject
 type ref []string
 
 func (r ref) String() string {

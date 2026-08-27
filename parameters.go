@@ -14,7 +14,7 @@ import (
 // This map MUST contain all the parameters used in the parent channel address.
 // ([Specification])
 //
-// [Specification]: https://www.asyncapi.com/docs/reference/specification/v3.1.0#parametersObject
+// [Specification]: https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#parametersObject
 type Parameters map[string]*ParameterRef
 
 // Validate validates each parameter.

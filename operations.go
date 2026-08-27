@@ -15,7 +15,7 @@ import (
 // Tools and libraries MAY use it to uniquely identify an operation, therefore, it is RECOMMENDED to follow common programming naming conventions.
 // ([Specification])
 //
-// [Specification]: https://www.asyncapi.com/docs/reference/specification/v3.1.0#operationsObject
+// [Specification]: https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#operationsObject
 type Operations map[string]*OperationRef
 
 // Validate validates each operation.

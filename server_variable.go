@@ -10,7 +10,7 @@ import (
 // ServerVariable is an object representing a Server Variable for server URL template substitution.
 // ([Specification])
 //
-// [Specification]: https://www.asyncapi.com/docs/reference/specification/v3.1.0#serverVariableObject
+// [Specification]: https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#serverVariableObject
 type ServerVariable struct {
 	// An enumeration of string values to be used if the substitution options are from a limited set.
 	Enum []string `json:"enum,omitempty" yaml:"enum,omitempty"`

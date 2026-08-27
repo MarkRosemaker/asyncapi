@@ -10,7 +10,7 @@ import (
 // ExternalDocs allows referencing an external resource for extended documentation.
 // ([Specification])
 //
-// [Specification]: https://www.asyncapi.com/docs/reference/specification/v3.1.0#externalDocumentationObject
+// [Specification]: https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#externalDocumentationObject
 type ExternalDocs struct {
 	// A short description of the target documentation. CommonMark syntax can be used for rich text representation.
 	Description string `json:"description,omitempty" yaml:"description,omitempty"`

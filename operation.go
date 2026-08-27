@@ -9,7 +9,7 @@ import (
 // Operation describes a specific operation.
 // ([Specification])
 //
-// [Specification]: https://www.asyncapi.com/docs/reference/specification/v3.1.0#operationObject
+// [Specification]: https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#operationObject
 type Operation struct {
 	// REQUIRED. Use `send` when it's expected that the application will send a message to the given channel,
 	// and `receive` when the application should expect receiving messages from the given channel.

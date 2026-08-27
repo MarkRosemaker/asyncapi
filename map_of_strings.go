@@ -12,7 +12,7 @@ import (
 // which are "a map between the scope name and a short description for it".
 // ([Specification])
 //
-// [Specification]: https://www.asyncapi.com/docs/reference/specification/v3.1.0#oauthFlowObject
+// [Specification]: https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#oauthFlowObject
 type MapOfStrings map[string]String
 
 // ByIndex returns a sequence of key-value pairs ordered by index.

@@ -16,7 +16,7 @@ import (
 // itself is the AsyncAPI schema, otherwise the schema is wrapped in a Multi Format Schema Object.
 // ([Specification])
 //
-// [Specification]: https://www.asyncapi.com/docs/reference/specification/v3.1.0#multiFormatSchemaObject
+// [Specification]: https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#multiFormatSchemaObject
 type AnySchema struct {
 	// The name of the schema format that is used to define the information.
 	// If it is missing, it defaults to an AsyncAPI schema format, i.e. the schema is a [Schema] object.
@@ -35,7 +35,7 @@ type AnySchema struct {
 // It is the wire format of an [AnySchema] that has a schema format.
 // ([Specification])
 //
-// [Specification]: https://www.asyncapi.com/docs/reference/specification/v3.1.0#multiFormatSchemaObject
+// [Specification]: https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#multiFormatSchemaObject
 type MultiFormatSchema struct {
 	// REQUIRED. A string containing the name of the schema format that is used to define the information.
 	SchemaFormat SchemaFormat `json:"schemaFormat" yaml:"schemaFormat"`

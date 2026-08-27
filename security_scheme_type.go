@@ -9,7 +9,7 @@ import (
 // SecuritySchemeType is the type of a security scheme.
 // ([Specification])
 //
-// [Specification]: https://www.asyncapi.com/docs/reference/specification/v3.1.0#securitySchemeObject
+// [Specification]: https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#securitySchemeObject
 type SecuritySchemeType string
 
 const (

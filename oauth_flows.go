@@ -5,7 +5,7 @@ import "github.com/MarkRosemaker/errpath"
 // OAuthFlows allows configuration of the supported OAuth Flows.
 // ([Specification])
 //
-// [Specification]: https://www.asyncapi.com/docs/reference/specification/v3.1.0#oauthFlowsObject
+// [Specification]: https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#oauthFlowsObject
 type OAuthFlows struct {
 	// Configuration for the OAuth Implicit flow.
 	Implicit *OAuthFlowImplicit `json:"implicit,omitempty" yaml:"implicit,omitempty"`

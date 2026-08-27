@@ -28,14 +28,14 @@ The primary goals of this package are:
 
 ## Features
 
-- **Comprehensive parsing** of [AsyncAPI 3.1.0](https://www.asyncapi.com/docs/reference/specification/v3.1.0) specifications, in JSON as well as in YAML.
-- **Strict validation** against the rules of the specification: required fields, enumerations, key and address patterns, absolute URLs, [runtime expressions](https://www.asyncapi.com/docs/reference/specification/v3.1.0#runtimeExpression), and the rules that span several objects, e.g. that the messages of an [operation](https://www.asyncapi.com/docs/reference/specification/v3.1.0#operationObject) "MUST contain a subset of the messages defined in the channel referenced in this operation". Every error names the exact location of the problem, e.g. `channels["userSignedup"].messages["userSignedUp"].contentType: mime: expected slash after first token`.
+- **Comprehensive parsing** of [AsyncAPI 3.1.0](https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md) specifications, in JSON as well as in YAML.
+- **Strict validation** against the rules of the specification: required fields, enumerations, key and address patterns, absolute URLs, [runtime expressions](https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#runtimeExpression), and the rules that span several objects, e.g. that the messages of an [operation](https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#operationObject) "MUST contain a subset of the messages defined in the channel referenced in this operation". Every error names the exact location of the problem, e.g. `channels["userSignedup"].messages["userSignedUp"].contentType: mime: expected slash after first token`.
 - **Marshalling** back to JSON and to YAML, to a file, to a writer or to a byte slice.
-- **Reference resolution** of every referencable object, including references that point to other references, e.g. an operation that refers to a message of a channel which in turn refers to a message of the [components object](https://www.asyncapi.com/docs/reference/specification/v3.1.0#componentsObject).
+- **Reference resolution** of every referencable object, including references that point to other references, e.g. an operation that refers to a message of a channel which in turn refers to a message of the [components object](https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#componentsObject).
 - **Order preservation**: maps keep the order in which their keys were defined, so writing a specification back doesn't reshuffle it.
-- **Multi format schemas**: schemas in other formats (Avro, Protobuf, RAML, ...) are kept as they are, [AsyncAPI schemas](https://www.asyncapi.com/docs/reference/specification/v3.1.0#schemaObject) are parsed, including boolean schemas and multiple types.
-- **Bindings** of all [20 protocols](https://www.asyncapi.com/docs/reference/specification/v3.1.0#serverBindingsObject) are preserved as they were given, so nothing is lost when a specification is written back.
-- **Documented in line with the specification**: every object, field and rule quotes the [official documentation](https://www.asyncapi.com/docs/reference/specification/v3.1.0) and links to the section it comes from.
+- **Multi format schemas**: schemas in other formats (Avro, Protobuf, RAML, ...) are kept as they are, [AsyncAPI schemas](https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#schemaObject) are parsed, including boolean schemas and multiple types.
+- **Bindings** of all [20 protocols](https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#serverBindingsObject) are preserved as they were given, so nothing is lost when a specification is written back.
+- **Documented in line with the specification**: every object, field and rule quotes the [official documentation](https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md) and links to the section it comes from.
 
 ## Usage
 

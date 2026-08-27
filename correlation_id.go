@@ -11,7 +11,7 @@ import (
 // For specifying and computing the location of a Correlation ID, a [RuntimeExpression] is used.
 // ([Specification])
 //
-// [Specification]: https://www.asyncapi.com/docs/reference/specification/v3.1.0#correlationIdObject
+// [Specification]: https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#correlationIdObject
 type CorrelationID struct {
 	// An optional description of the identifier. CommonMark syntax can be used for rich text representation.
 	Description string `json:"description,omitempty" yaml:"description,omitempty"`

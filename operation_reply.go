@@ -6,7 +6,7 @@ import "github.com/MarkRosemaker/errpath"
 // If an operation implements the request/reply pattern, the reply object represents the response message.
 // ([Specification])
 //
-// [Specification]: https://www.asyncapi.com/docs/reference/specification/v3.1.0#operationReplyObject
+// [Specification]: https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#operationReplyObject
 type OperationReply struct {
 	// Definition of the address that implementations MUST use for the reply.
 	Address *OperationReplyAddressRef `json:"address,omitempty" yaml:"address,omitempty"`

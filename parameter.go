@@ -12,7 +12,7 @@ import (
 // Parameter describes a parameter included in a channel address.
 // ([Specification])
 //
-// [Specification]: https://www.asyncapi.com/docs/reference/specification/v3.1.0#parameterObject
+// [Specification]: https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#parameterObject
 type Parameter struct {
 	// An enumeration of string values to be used if the substitution options are from a limited set.
 	Enum []string `json:"enum,omitempty" yaml:"enum,omitempty"`

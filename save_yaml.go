@@ -12,7 +12,7 @@ import (
 // round-trip between YAML and JSON formats, YAML version 1.2 is RECOMMENDED along with some
 // additional constraints." ([Specification])
 //
-// [Specification]: https://www.asyncapi.com/docs/reference/specification/v3.1.0#format
+// [Specification]: https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#format
 func (d Document) WriteYAML(w io.Writer) error {
 	data, err := d.ToYAML()
 	if err != nil {

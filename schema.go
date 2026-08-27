@@ -24,7 +24,7 @@ import (
 // ([Specification])
 //
 // [JSON Schema Specification Draft 07]: https://json-schema.org/specification-links.html#draft-7
-// [Specification]: https://www.asyncapi.com/docs/reference/specification/v3.1.0#schemaObject
+// [Specification]: https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#schemaObject
 type Schema struct {
 	// A boolean schema. `true` allows any instance to validate, `false` allows none.
 	// When it is set, all other fields are ignored.

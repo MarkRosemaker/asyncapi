@@ -9,7 +9,7 @@ import (
 // Message describes a message received on a given channel and operation.
 // ([Specification])
 //
-// [Specification]: https://www.asyncapi.com/docs/reference/specification/v3.1.0#messageObject
+// [Specification]: https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#messageObject
 type Message struct {
 	// Schema definition of the application headers. Schema MUST be a map of key-value pairs.
 	// It MUST NOT define the protocol headers.

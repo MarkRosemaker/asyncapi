@@ -27,7 +27,7 @@ var reKey = regexp.MustCompile(`^[a-zA-Z0-9\.\-_]+$`)
 //	user-name
 //	my.org.User
 //
-// [Specification]: https://www.asyncapi.com/docs/reference/specification/v3.1.0#componentsObject
+// [Specification]: https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#componentsObject
 type Components struct {
 	// An object to hold reusable Schema Objects.
 	Schemas Schemas `json:"schemas,omitempty" yaml:"schemas,omitempty"`

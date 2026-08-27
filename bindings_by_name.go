@@ -12,7 +12,7 @@ import (
 // BindingsByName is a map of bindings objects.
 // ([Specification])
 //
-// [Specification]: https://www.asyncapi.com/docs/reference/specification/v3.1.0#componentsServerBindings
+// [Specification]: https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#componentsServerBindings
 type BindingsByName map[string]*BindingsRef
 
 // Validate validates each bindings object.

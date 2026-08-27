@@ -27,7 +27,7 @@ var reServerKey = regexp.MustCompile(`^[A-Za-z0-9_\-]+$`)
 // It combines resource listing and API declaration together into one document.
 // ([Specification])
 //
-// [Specification]: https://www.asyncapi.com/docs/reference/specification/v3.1.0#A2SObject
+// [Specification]: https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#A2SObject
 type Document struct {
 	// REQUIRED. Specifies the AsyncAPI Specification version being used.
 	// It can be used by tooling Specifications and clients to interpret the version.
@@ -65,7 +65,7 @@ type Document struct {
 // hyphen and extra alphanumeric characters." Only major version 3 is supported.
 // ([Specification])
 //
-// [Specification]: https://www.asyncapi.com/docs/reference/specification/v3.1.0#A2SVersionString
+// [Specification]: https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#A2SVersionString
 var reAsyncAPIVersion = regexp.MustCompile(`^3\.\d+\.\d+(-[A-Za-z0-9]+)?$`)
 
 // Validate checks the AsyncAPI document for correctness.

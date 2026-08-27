@@ -9,7 +9,7 @@ import (
 // of a [MultiFormatSchema].
 // ([Specification])
 //
-// [Specification]: https://www.asyncapi.com/docs/reference/specification/v3.1.0#multiFormatSchemaObject
+// [Specification]: https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#multiFormatSchemaObject
 type SchemaFormat string
 
 const (

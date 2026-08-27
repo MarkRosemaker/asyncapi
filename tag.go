@@ -9,7 +9,7 @@ import (
 // Tag allows adding meta data to a single tag.
 // ([Specification])
 //
-// [Specification]: https://www.asyncapi.com/docs/reference/specification/v3.1.0#tagObject
+// [Specification]: https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#tagObject
 type Tag struct {
 	// REQUIRED. The name of the tag.
 	Name string `json:"name" yaml:"name"`

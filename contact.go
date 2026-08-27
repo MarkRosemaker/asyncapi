@@ -10,7 +10,7 @@ import (
 // Contact information for the exposed API.
 // ([Specification])
 //
-// [Specification]: https://www.asyncapi.com/docs/reference/specification/v3.1.0#contactObject
+// [Specification]: https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#contactObject
 type Contact struct {
 	// The identifying name of the contact person/organization.
 	Name string `json:"name,omitempty" yaml:"name,omitempty"`

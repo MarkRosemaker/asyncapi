@@ -11,7 +11,7 @@ import (
 // Variable substitution can be used so that some details, for example usernames and passwords, can be injected by code generation tools.
 // ([Specification])
 //
-// [Specification]: https://www.asyncapi.com/docs/reference/specification/v3.1.0#serverObject
+// [Specification]: https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#serverObject
 type Server struct {
 	// REQUIRED. The server host name. It MAY include the port.
 	// This field supports Server Variables. Variable substitutions will be made when a variable is named in {braces}.

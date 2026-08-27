@@ -15,7 +15,7 @@ import (
 // Tools and libraries MAY use it to uniquely identify a message, therefore, it is RECOMMENDED to follow common programming naming conventions.
 // ([Specification])
 //
-// [Specification]: https://www.asyncapi.com/docs/reference/specification/v3.1.0#messagesObject
+// [Specification]: https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#messagesObject
 type Messages map[string]*MessageRef
 
 // Validate validates each message.

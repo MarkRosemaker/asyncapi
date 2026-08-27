@@ -15,7 +15,7 @@ import (
 // so that the references of the document can be resolved once it was read.
 // ([Specification])
 //
-// [Specification]: https://www.asyncapi.com/docs/reference/specification/v3.1.0#referenceObject
+// [Specification]: https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#referenceObject
 type loader struct {
 	schemas         map[string]*AnySchema
 	servers         map[string]*Server

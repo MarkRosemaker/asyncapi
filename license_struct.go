@@ -9,7 +9,7 @@ import (
 // License information for the exposed API.
 // ([Specification])
 //
-// [Specification]: https://www.asyncapi.com/docs/reference/specification/v3.1.0#licenseObject
+// [Specification]: https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#licenseObject
 type License struct {
 	// REQUIRED. The license name used for the API.
 	Name string `json:"name" yaml:"name"`

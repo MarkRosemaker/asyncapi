@@ -11,7 +11,7 @@ import (
 // The metadata can be used by the clients if needed.
 // ([Specification])
 //
-// [Specification]: https://www.asyncapi.com/docs/reference/specification/v3.1.0#infoObject
+// [Specification]: https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#infoObject
 type Info struct {
 	// REQUIRED. The title of the application.
 	Title string `json:"title" yaml:"title"`

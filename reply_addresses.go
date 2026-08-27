@@ -12,7 +12,7 @@ import (
 // ReplyAddresses is a map of Operation Reply Address Objects.
 // ([Specification])
 //
-// [Specification]: https://www.asyncapi.com/docs/reference/specification/v3.1.0#componentsReplyAddresses
+// [Specification]: https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#componentsReplyAddresses
 type ReplyAddresses map[string]*OperationReplyAddressRef
 
 // Validate validates each reply address.

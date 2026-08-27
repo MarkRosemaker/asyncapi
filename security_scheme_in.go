@@ -10,7 +10,7 @@ import (
 // for `apiKey` and `query`, `header` or `cookie` for `httpApiKey`."
 // ([Specification])
 //
-// [Specification]: https://www.asyncapi.com/docs/reference/specification/v3.1.0#securitySchemeObject
+// [Specification]: https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#securitySchemeObject
 type SecuritySchemeIn string
 
 const (

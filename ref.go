@@ -26,7 +26,7 @@ import (
 // ([Specification])
 //
 // [JSON Reference]: https://tools.ietf.org/html/draft-pbryan-zyp-json-ref-03
-// [Specification]: https://www.asyncapi.com/docs/reference/specification/v3.1.0#referenceObject
+// [Specification]: https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#referenceObject
 type Reference struct {
 	// REQUIRED. The reference string.
 	Identifier string `json:"$ref" yaml:"$ref"`

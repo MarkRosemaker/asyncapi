@@ -12,7 +12,7 @@ import (
 // If you're looking to apply traits to an operation, see the [OperationTrait] object.
 // ([Specification])
 //
-// [Specification]: https://www.asyncapi.com/docs/reference/specification/v3.1.0#messageTraitObject
+// [Specification]: https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#messageTraitObject
 type MessageTrait struct {
 	// Schema definition of the application headers. Schema MUST be a map of key-value pairs.
 	// It MUST NOT define the protocol headers.

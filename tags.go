@@ -9,7 +9,7 @@ import (
 // Tags is a list of Tag Objects. A Tag Object in a list can be referenced by a Reference Object.
 // ([Specification])
 //
-// [Specification]: https://www.asyncapi.com/docs/reference/specification/v3.1.0#tagsObject
+// [Specification]: https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#tagsObject
 type Tags []*TagRef
 
 // Validate validates each tag and makes sure that the tag names are unique.

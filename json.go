@@ -14,7 +14,7 @@ import (
 // formats, YAML version 1.2 is RECOMMENDED along with some additional constraints."
 // ([Specification])
 //
-// [Specification]: https://www.asyncapi.com/docs/reference/specification/v3.1.0#format
+// [Specification]: https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#format
 var jsonOpts = json.JoinOptions([]json.Options{
 	// the AsyncAPI specification doesn't allow unknown fields in most objects
 	// also protect against deleting unknown fields when overwriting later

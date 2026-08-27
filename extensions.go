@@ -26,7 +26,7 @@ import (
 // Note: For convenience, certain common extensions are implemented as fields
 // directly within the respective structs.
 //
-// [Specification]: https://www.asyncapi.com/docs/reference/specification/v3.1.0#specificationExtensions
+// [Specification]: https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#specificationExtensions
 type Extensions = jsontext.Value
 
 // ErrUnknownField is returned when a field is not recognized and also doesn't have a "x-" prefix signifying it is an extension.

@@ -13,7 +13,7 @@ import (
 // a multi format schema object or a reference to one of them.
 // ([Specification])
 //
-// [Specification]: https://www.asyncapi.com/docs/reference/specification/v3.1.0#componentsSchemas
+// [Specification]: https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#componentsSchemas
 type Schemas map[string]*AnySchemaRef
 
 // Validate validates each schema.

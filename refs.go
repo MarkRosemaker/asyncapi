@@ -11,7 +11,7 @@ import (
 // "Please note the `channel` property value MUST be a Reference Object and, therefore,
 // MUST NOT contain a Channel Object." ([Specification])
 //
-// [Specification]: https://www.asyncapi.com/docs/reference/specification/v3.1.0#operationObject
+// [Specification]: https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#operationObject
 var ErrMustBeReference = errors.New("must be a reference object")
 
 // ErrMessageNotOfChannel is returned when an operation or an operation reply refers to a message

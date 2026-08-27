@@ -10,7 +10,7 @@ import (
 // or receives messages from it.
 // ([Specification])
 //
-// [Specification]: https://www.asyncapi.com/docs/reference/specification/v3.1.0#operationObject
+// [Specification]: https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#operationObject
 type OperationAction string
 
 const (

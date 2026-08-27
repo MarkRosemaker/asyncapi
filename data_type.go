@@ -12,7 +12,7 @@ import (
 // DataType is the type of a schema, based on the types supported by the JSON Schema Specification Draft 07.
 // ([Specification])
 //
-// [Specification]: https://www.asyncapi.com/docs/reference/specification/v3.1.0#dataTypeFormat
+// [Specification]: https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#dataTypeFormat
 type DataType string
 
 const (

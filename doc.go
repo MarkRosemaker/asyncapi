@@ -42,7 +42,7 @@
 // if a canonical order is preferred over the original one.
 //
 // [AsyncAPI]: https://www.asyncapi.com
-// [AsyncAPI Specification]: https://www.asyncapi.com/docs/reference/specification/v3.1.0
-// [Format]: https://www.asyncapi.com/docs/reference/specification/v3.1.0#format
-// [Operation Object]: https://www.asyncapi.com/docs/reference/specification/v3.1.0#operationObject
+// [AsyncAPI Specification]: https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md
+// [Format]: https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#format
+// [Operation Object]: https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#operationObject
 package asyncapi

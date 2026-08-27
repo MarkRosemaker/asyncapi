@@ -10,19 +10,19 @@ import (
 // reChannelAddressExpression matches a Channel Address Expression, i.e. a name enclosed in curly braces.
 // ([Specification])
 //
-// [Specification]: https://www.asyncapi.com/docs/reference/specification/v3.1.0#channelAddressExpressions
+// [Specification]: https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#channelAddressExpressions
 var reChannelAddressExpression = regexp.MustCompile(`\{([^{}]+)\}`)
 
 // reParameterKey is the regular expression the keys of the parameters of a channel must match.
 // ([Specification])
 //
-// [Specification]: https://www.asyncapi.com/docs/reference/specification/v3.1.0#parametersObject
+// [Specification]: https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#parametersObject
 var reParameterKey = regexp.MustCompile(`^[A-Za-z0-9_\-]+$`)
 
 // Channel describes a shared communication channel.
 // ([Specification])
 //
-// [Specification]: https://www.asyncapi.com/docs/reference/specification/v3.1.0#channelObject
+// [Specification]: https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#channelObject
 type Channel struct {
 	// An optional string representation of this channel's address.
 	// The address is typically the "topic name", "routing key", "event type", or "path".

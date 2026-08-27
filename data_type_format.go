@@ -8,7 +8,7 @@ import "slices"
 // documentation needs, so an unknown format is not an error.
 // ([Specification])
 //
-// [Specification]: https://www.asyncapi.com/docs/reference/specification/v3.1.0#dataTypeFormat
+// [Specification]: https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#dataTypeFormat
 type Format string
 
 const (

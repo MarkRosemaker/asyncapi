@@ -15,7 +15,7 @@ import (
 // Tools and libraries MAY use it to uniquely identify a channel, therefore, it is RECOMMENDED to follow common programming naming conventions.
 // ([Specification])
 //
-// [Specification]: https://www.asyncapi.com/docs/reference/specification/v3.1.0#channelsObject
+// [Specification]: https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#channelsObject
 type Channels map[string]*ChannelRef
 
 // Validate validates each channel.

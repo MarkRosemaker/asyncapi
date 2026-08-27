@@ -11,7 +11,7 @@ import (
 //
 // "An AsyncAPI document can be JSON or YAML format." ([Specification])
 //
-// [Specification]: https://www.asyncapi.com/docs/reference/specification/v3.1.0#format
+// [Specification]: https://github.com/asyncapi/spec/blob/master/spec/asyncapi.md#format
 func (l *loader) LoadFromReaderJSON(r io.Reader) (*Document, error) {
 	l.reset()
 
