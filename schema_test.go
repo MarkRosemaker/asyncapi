@@ -139,6 +139,62 @@ func TestSchema_Composition(t *testing.T) {
 	}
 }
 
+// TestSchema_ContentSchema checks that contentSchema round-trips through the
+// same AnySchemaRef machinery a payload uses — a protobuf schema needs the
+// same "which format, then the schema in that format" shape a message's
+// payload does, so it reuses AnySchema rather than inventing a second one.
+func TestSchema_ContentSchema(t *testing.T) {
+	t.Parallel()
+
+	s := loadSchema(t, `{"type":"string","contentEncoding":"base64",`+
+		`"contentMediaType":"application/vnd.google.protobuf;version=3",`+
+		`"contentSchema":{"schemaFormat":"application/vnd.google.protobuf;version=3",`+
+		`"schema":"syntax = \"proto3\";\n\nmessage Foo { string id = 1; }"}}`)
+
+	cs := s.Schema.ContentSchema
+	if cs == nil {
+		t.Fatal("expected a content schema")
+	}
+
+	if got, want := cs.Value.SchemaFormat, asyncapi.SchemaFormatProtobuf3; got != want {
+		t.Fatalf("schemaFormat: got %v, want %v", got, want)
+	}
+
+	if got, want := string(cs.Value.Raw), `"syntax = \"proto3\";\n\nmessage Foo { string id = 1; }"`; got != want {
+		t.Fatalf("raw: got %s, want %s", got, want)
+	}
+}
+
+// TestSchema_ContentSchema_Ref checks that a $ref inside contentSchema
+// resolves the same way [Schema.Items] or [Schema.Not] would — contentSchema
+// is wired into [Schema] alongside them, sharing subSchemas, so a component
+// schema can be reused as more than one field's contentSchema instead of
+// repeating it inline.
+func TestSchema_ContentSchema_Ref(t *testing.T) {
+	t.Parallel()
+
+	doc, err := asyncapi.LoadFromDataJSON([]byte(`{"asyncapi":"3.1.0",` +
+		`"info":{"title":"foo","version":"1.0.0"},` +
+		`"components":{"schemas":{` +
+		`"protoDef":{"schemaFormat":"application/vnd.google.protobuf;version=3",` +
+		`"schema":"syntax = \"proto3\";\n\nmessage Foo { string id = 1; }"},` +
+		`"test":{"type":"string","contentEncoding":"base64",` +
+		`"contentSchema":{"$ref":"#/components/schemas/protoDef"}}` +
+		`}}}`))
+	if err != nil {
+		t.Fatal(err)
+	}
+
+	if err := doc.Validate(); err != nil {
+		t.Fatal(err)
+	}
+
+	cs := doc.Components.Schemas["test"].Value.Schema.ContentSchema
+	if cs.Value != doc.Components.Schemas["protoDef"].Value {
+		t.Fatal("contentSchema's $ref was not resolved to the referenced component")
+	}
+}
+
 func TestSchema_SortMaps(t *testing.T) {
 	t.Parallel()
 

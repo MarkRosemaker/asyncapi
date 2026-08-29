@@ -122,6 +122,31 @@ func TestAnySchema_MultiFormat(t *testing.T) {
 		}
 	})
 
+	t.Run("protobuf", func(t *testing.T) {
+		t.Parallel()
+
+		// Protobuf is not JSON-based, so — unlike Avro above — its schema is
+		// inlined as a string: the raw .proto source, quotes and all.
+		s := loadSchema(t, `{"schemaFormat":"application/vnd.google.protobuf;version=3",`+
+			`"schema":"syntax = \"proto3\";\n\nmessage Foo { string id = 1; }"}`)
+
+		if got, want := s.SchemaFormat, asyncapi.SchemaFormatProtobuf3; got != want {
+			t.Fatalf("got: %v, want: %v", got, want)
+		}
+
+		if !s.SchemaFormat.IsKnown() {
+			t.Fatalf("%q should be a known schema format", s.SchemaFormat)
+		}
+
+		if s.Schema != nil {
+			t.Fatal("expected no AsyncAPI schema")
+		}
+
+		if got, want := string(s.Raw), `"syntax = \"proto3\";\n\nmessage Foo { string id = 1; }"`; got != want {
+			t.Fatalf("got: %s, want: %s", got, want)
+		}
+	})
+
 	t.Run("asyncapi", func(t *testing.T) {
 		t.Parallel()
 
