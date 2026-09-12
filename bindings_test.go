@@ -43,7 +43,7 @@ func TestBindings_Validate(t *testing.T) {
 
 		doc := minimalDocument()
 		doc.Channels["userSignedup"].Value.Bindings = &asyncapi.BindingsRef{
-			Value: &asyncapi.Bindings{"carrierPigeon": {Value: []byte(`{}`)}},
+			Value: &asyncapi.Bindings{"carrierPigeon": {Value: []byte(`{}`)}}, //nolint:exhaustive
 		}
 
 		err := doc.Validate()
@@ -66,7 +66,7 @@ func TestBindings_Validate(t *testing.T) {
 		// the bindings object may be extended with specification extensions
 		doc := minimalDocument()
 		doc.Channels["userSignedup"].Value.Bindings = &asyncapi.BindingsRef{
-			Value: &asyncapi.Bindings{"x-custom": {Value: []byte(`{}`)}},
+			Value: &asyncapi.Bindings{"x-custom": {Value: []byte(`{}`)}}, //nolint:exhaustive
 		}
 
 		if err := doc.Validate(); err != nil {
