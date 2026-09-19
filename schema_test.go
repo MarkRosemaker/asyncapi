@@ -198,25 +198,29 @@ func TestSchema_ContentSchema_Ref(t *testing.T) {
 func TestSchema_SortMaps(t *testing.T) {
 	t.Parallel()
 
-	s := &asyncapi.Schema{
-		Type: asyncapi.DataTypes{asyncapi.TypeObject},
-		Properties: asyncapi.Schemas{
-			"c": {Value: &asyncapi.AnySchema{Schema: &asyncapi.Schema{}}},
-			"a": {Value: &asyncapi.AnySchema{Schema: &asyncapi.Schema{}}},
-			"b": {Value: &asyncapi.AnySchema{Schema: &asyncapi.Schema{}}},
-		},
-	}
+	t.Run("does not touch properties", func(t *testing.T) {
+		val := &asyncapi.AnySchemaRef{Value: &asyncapi.AnySchema{Schema: &asyncapi.Schema{}}}
+		props := asyncapi.Schemas{}
+		props.Set("c", val)
+		props.Set("a", val)
+		props.Set("b", val)
 
-	s.SortMaps()
-
-	want := []string{"a", "b", "c"}
-
-	i := 0
-	for name := range s.Properties.ByIndex() {
-		if name != want[i] {
-			t.Fatalf("got: %v, want: %v", name, want[i])
+		s := &asyncapi.Schema{
+			Type:       asyncapi.DataTypes{asyncapi.TypeObject},
+			Properties: props,
 		}
 
-		i++
-	}
+		s.SortMaps()
+
+		want := []string{"c", "a", "b"}
+
+		i := 0
+		for name := range s.Properties.ByIndex() {
+			if name != want[i] {
+				t.Fatalf("got: %v, want: %v", name, want[i])
+			}
+
+			i++
+		}
+	})
 }
