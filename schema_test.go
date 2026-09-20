@@ -201,10 +201,15 @@ func TestSchema_SortMaps(t *testing.T) {
 	t.Run("does not touch properties", func(t *testing.T) {
 		want := []string{"c", "a", "b"}
 
-		val := &asyncapi.AnySchemaRef{Value: &asyncapi.AnySchema{Schema: &asyncapi.Schema{}}}
 		props := asyncapi.Schemas{}
 		for _, key := range want {
-			props.Set(key, val)
+			// A distinct value per key: Set stores the index on the value
+			// itself, so sharing one pointer across keys would make every
+			// Set call overwrite the same index and leave all three keys
+			// tied — their relative order then depends on Go's randomized
+			// map iteration, not on insertion order, which is exactly what
+			// this test means to rule out.
+			props.Set(key, &asyncapi.AnySchemaRef{Value: &asyncapi.AnySchema{Schema: &asyncapi.Schema{}}})
 		}
 
 		s := &asyncapi.Schema{
