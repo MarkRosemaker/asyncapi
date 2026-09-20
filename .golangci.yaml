@@ -5,7 +5,6 @@ linters:
         - dupword
         - errcheck
         - exhaustive
-        - govet
         - noctx
         - tagalign
         - testifylint
@@ -23,11 +22,6 @@ linters:
                 - switch
                 - map
             default-signifies-exhaustive: true
-        govet:
-            disable:
-                - fieldalignment
-                - shadow
-            enable-all: true
         tagalign:
             align: true
             sort: true
