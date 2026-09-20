@@ -201,10 +201,10 @@ func TestSchema_SortMaps(t *testing.T) {
 	t.Run("does not touch properties", func(t *testing.T) {
 		want := []string{"c", "a", "b"}
 
-		val := &asyncapi.AnySchemaRef{Value: &asyncapi.AnySchema{Schema: &asyncapi.Schema{}}}
 		props := asyncapi.Schemas{}
 		for _, key := range want {
-			props.Set(key, val)
+			// distinct value per key (index is stored in AnySchemaRef)
+			props.Set(key, &asyncapi.AnySchemaRef{Value: &asyncapi.AnySchema{Schema: &asyncapi.Schema{}}})
 		}
 
 		s := &asyncapi.Schema{
