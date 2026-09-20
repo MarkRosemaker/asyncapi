@@ -6,8 +6,8 @@ github.com/MarkRosemaker/json2yaml v0.0.0-20260920104944-bbfc9b6648b0 h1:0zfX5WG
 github.com/MarkRosemaker/json2yaml v0.0.0-20260920104944-bbfc9b6648b0/go.mod h1:eUwIjjooIESK1Ymw4bbMdSDF6feAblyZjxyoo5o/W6U=
 github.com/MarkRosemaker/jsonutil v0.0.0-20260920104948-8e763fe0b771 h1:v5lHCmUNWqNSi5YjCNNcM2GpiVfXvKUQg8obC+/S0/8=
 github.com/MarkRosemaker/jsonutil v0.0.0-20260920104948-8e763fe0b771/go.mod h1:SzjJlgYFlzpbFGvUUoQgfEsWlbai63bvhDPK8J0MNYM=
-github.com/MarkRosemaker/ordmap v0.0.0-20260920112340-841d22da417a h1:ZcaOYtSyJ44H4cU90e0KnHC1y/bKgI0Ny5pq250gJqE=
-github.com/MarkRosemaker/ordmap v0.0.0-20260920112340-841d22da417a/go.mod h1:JX4/xCqG+fUDGssGLlWmjVM1Pv553rAba/5v98ExMKM=
+github.com/MarkRosemaker/ordmap v0.0.0-20260920121440-d962cf748b3e h1:kj0m+eII4M0zB3qQUugPlOBGuDqEpvHADPgldpiSRLo=
+github.com/MarkRosemaker/ordmap v0.0.0-20260920121440-d962cf748b3e/go.mod h1:imSlpAegwdesJzBscYkerXWzI0mU45TiWDTVBAT/rJg=
 github.com/MarkRosemaker/yaml v0.0.0-20260920105018-6263ee74cfdf h1:vHHSxkJVRHLzc0E/S+93W36COeX8uanpFGczmKQcCGI=
 github.com/MarkRosemaker/yaml v0.0.0-20260920105018-6263ee74cfdf/go.mod h1:TXYb9H/dERRxaaxtobaOxON8LqmuI84pCLKJ89ns7mE=
 github.com/MarkRosemaker/yaml2json v0.0.0-20260920104951-dc9a2bf64fb4 h1:Vm2J3ve8F3DYb+7YZ9cc1mhFkRAmV7DM0T7B7PGPcmQ=

@@ -5,7 +5,7 @@ go 1.27.0
 require (
 	github.com/MarkRosemaker/errpath v0.0.0-20260920114347-639d98dfaa6b
 	github.com/MarkRosemaker/jsonutil v0.0.0-20260920104948-8e763fe0b771
-	github.com/MarkRosemaker/ordmap v0.0.0-20260920112340-841d22da417a
+	github.com/MarkRosemaker/ordmap v0.0.0-20260920121440-d962cf748b3e
 	github.com/MarkRosemaker/yaml v0.0.0-20260920105018-6263ee74cfdf
 	github.com/go-api-libs/types v0.0.0-20260821232109-0cf45378823e
 )
